@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val txtArt = findViewById<TextView>(R.id.txtArt)
         // Variable to show the art
         var art = ""
-        // Counter (inspired by Chat GPT Open AI brainstorming)
+        // Counter (inspired by ChatGPT Open AI brainstorming)
         var row = 1
         // While loop
         while (row <= 7) {
@@ -26,7 +26,13 @@ class MainActivity : AppCompatActivity() {
                 art += "*"
                 stars++
             }
+            // Next line
+            art += "\n"
+            // Next line
+            row++
         }
+        // Result
+        txtArt.text = art
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
