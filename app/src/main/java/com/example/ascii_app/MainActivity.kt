@@ -15,7 +15,9 @@ class MainActivity : AppCompatActivity() {
         // val for text view
         val txtArt = findViewById<TextView>(R.id.txtArt)
         // Variable to show the art
+        var art = ""
         
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
