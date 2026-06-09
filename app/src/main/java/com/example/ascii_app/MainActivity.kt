@@ -15,7 +15,25 @@ class MainActivity : AppCompatActivity() {
         // val for text view
         val txtArt = findViewById<TextView>(R.id.txtArt)
         // Variable to show the art
-        
+        var art = ""
+        // Counter (inspired by ChatGPT Open AI brainstorming)
+        var row = 1
+        // While loop
+        while (row <= 7) {
+            var stars = 1
+            // Add stars
+            while (stars <= row) {
+                art += "*"
+                stars++
+            }
+            // Next line
+            art += "\n"
+            // Next line
+            row++
+        }
+        // Result
+        txtArt.text = art
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
